@@ -1,0 +1,59 @@
+.header {
+    margin-top: 70px;
+}
+.title {
+    width: 20%;
+    display: inline-block;
+}
+.seats {
+    width: 12%;
+    display: inline-block;
+}
+
+.country {
+    width: 18%;
+    display: inline-block;
+}
+
+.price {
+    width: 13%;
+    display: inline-block;
+}
+.total {
+    width: 13%;
+    display: inline-block;
+}
+#order{
+    text-align: right;
+}
+
+.row-header {
+    position: center;
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 40px;
+    color: burlywood;
+    padding: 10px 10px 10px 10px;
+}
+
+.row {
+    position: center;
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 40px;
+    color: burlywood;
+    padding: 10px 10px 10px 10px;
+}
+
+.skew-menu {
+    position: center;
+    width: 250px;
+    margin: 10px auto;
+    font-size: 16px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}

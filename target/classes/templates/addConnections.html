@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ticketbus</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/addConnections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: header-menu"></div>
+
+<div id="content">
+    <form action="#" method="post" id="add-form">
+        <p th:if="${info}" th:text="${info}" id="error"></p>
+        <input type="text" th:field="*{bus.miastoPoczatkowe}" id="poczatek" placeholder="Miasto początkowe">
+        <input type="text" th:field="*{bus.miastoKoncowe}" id="koniec" placeholder="Miasto końcowe">
+        <input type="text" th:field="*{bus.numerBiletu}" id="numer" placeholder="Numer kursu">
+        <input type="number" th:field="*{bus.iloscMiejsc}" id="miejsca" placeholder="Liczba miejsc">
+        <input type="text" th:field="*{bus.cena}" id="cena" placeholder="Cena">
+        <input type="submit">
+    </form>
+</div>
+
+<div th:replace="fragments.html :: footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

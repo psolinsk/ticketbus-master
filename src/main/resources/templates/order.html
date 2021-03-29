@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ticketbus</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: header-menu"></div>
+
+
+<div id="content">
+
+    <div class="row header">
+        <div class="orderid">Id zamówienia</div>
+        <div class="userid">Użytkownik</div>
+        <div class="orderpostition">Pozycja</div>
+        <div class="price">Cena zamówienia</div>
+        <div class="status">Status zamównienia</div>
+    </div>
+
+    <th:block th:each="order: ${userOrder}">
+        <div class="row">
+            <div class="orderid" th:text="${order.id}"></div>
+            <div class="userid" th:text="${order.user}"></div>
+            <div class="orderpostition" th:text="${order.positions}"></div>
+            <div class="price" th:text="${order.price} + ' zł'"></div>
+            <div class="status" th:text="${order.status}"></div>
+        </div>
+    </th:block>
+
+</div>
+
+<div th:replace="fragments.html :: footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

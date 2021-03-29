@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ticketbus</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: header-menu"></div>
+
+<div id="content">
+    <form method="post" id="edit-form">
+        <input type="text" th:field="*{bus.miastoPoczatkowe}">
+        <input type="text" th:field="*{bus.miastoKoncowe}">
+        <input type="date" th:field="*{bus.numerBiletu}">
+        <input type="date" th:field="*{bus.iloscMiejsc}">
+        <input type="text" th:field="*{bus.cena}">
+        <input type="submit">
+    </form>
+</div>
+
+<div th:replace="fragments.html :: footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

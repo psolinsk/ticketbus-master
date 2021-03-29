@@ -1,0 +1,31 @@
+.header {
+    margin-top: 70px;
+}
+
+.edit {
+    width: 80px;
+    margin: 10px auto;
+    font-size: 26px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#add-form {
+    position: center;
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 40px;
+    color: burlywood;
+    padding: 10px 10px 10px 10px;
+}
+
+.edit{
+    position: center;
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 40px;
+    color: burlywood;
+    padding: 10px 10px 10px 10px;
+}

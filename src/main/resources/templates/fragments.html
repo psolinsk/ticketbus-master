@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ticketbus</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<header>
+    <div class="logo" th:fragment="logo">
+        <img src="logo.jpg" alt="logo">
+    </div>
+    <div class="menu" th:fragment="header-menu">
+        <a href="/main">Strona głowna</a>
+        <a href="/logout" title="" th:if="${isLogged == true}">Wyloguj</a>
+        <a href="/login" title="" th:if="${isLogged == false}">Zaloguj</a>
+        <a href="/register" title="" th:if="${isLogged == false}">Rejestruj</a>
+        <a href="/basket" title="" th:if="${role == 'USER' }">Koszyk</a>
+        <a href="/addConnections" title="" th:if="${role == 'ADMIN' }">Połączenia</a>
+    </div>
+</header>
+
+
+<div class="footer-basic" th:fragment="footer">
+    <footer>
+        <p class="copyright">ticketbus © 2021 Patryk Soliński</p>
+    </footer>
+</div>
+
+</body>
+</html>

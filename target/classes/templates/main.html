@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ticketbus</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: header-menu"></div>
+
+<div id="content">
+    <th:block th:each="bus : ${buses}">
+        <div class="bus-box">
+            <div th:text="'Miasto początkowe: '+ ${bus.miastoPoczatkowe}" class="title-box"></div>
+            <div th:text="'Miasto końcowe: '+ ${bus.miastoKoncowe}" class="country-box"></div>
+            <div class="bus-data-box">
+                <div th:text="'Numer kursu: ' + ${bus.numerBiletu}"></div>
+                <div th:text="'Ilośc miejsc: ' + ${bus.iloscMiejsc}"></div>
+                <div th:text="'Cena: ' + ${bus.cena} + 'zł'"></div>
+                <a th:href="@{/addToBasket/{id}(id=${bus.id})}" class="buy-button" th:if="${isLogged}">Kup bilet!</a>
+                <a th:if="${role == 'ADMIN'}" th:href="@{/edit/{id}(id=${bus.id})}" class="edit-button">Edycja</a>
+                <a th:if="${role == 'ADMIN'}" th:href="@{/delete/{id}(id=${bus.id})}" class="delete-button">Usuń</a>
+            </div>
+        </div>
+    </th:block>
+</div>
+
+<div th:replace="fragments.html :: footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

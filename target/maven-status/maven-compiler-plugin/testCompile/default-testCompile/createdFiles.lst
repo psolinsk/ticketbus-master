@@ -1,0 +1,9 @@
+pl\edu\wszib\yourtravel\dao\impl\TourDAOStub.class
+pl\edu\wszib\yourtravel\dao\impl\UserDAOStub.class
+pl\edu\wszib\yourtravel\configuration\TestConfiguration.class
+pl\edu\wszib\yourtravel\services\impl\UserServiceImplTest.class
+pl\edu\wszib\yourtravel\dao\impl\OrderPositionsDAOStub.class
+pl\edu\wszib\yourtravel\model\TourTest.class
+pl\edu\wszib\yourtravel\session\SessionObjectTest.class
+pl\edu\wszib\yourtravel\dao\impl\OrderDAOStub.class
+pl\edu\wszib\yourtravel\services\impl\BasketServiceImplTest.class
